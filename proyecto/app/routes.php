@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', function()
+Route::get('ingresar/', function()
 {
 	return View::make('hello');
 });
+/*
+Route::get('ingresar',[
+		'as' 	=> 	'ingresar',
+		'uses' 	=>	'PersonaController@ingresar']
+		);*/
