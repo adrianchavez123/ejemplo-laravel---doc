@@ -11,12 +11,38 @@
 |
 */
 
-Route::get('ingresar/', function()
+Route::get('/', function()
 {
 	return View::make('hello');
 });
-/*
+
 Route::get('ingresar',[
-		'as' 	=> 	'ingresar',
-		'uses' 	=>	'PersonaController@ingresar']
-		);*/
+			'as' 	=>	'ingresar',
+			'uses'	=>	'PersonaController@ingresar']
+		);
+
+Route::post('ingresar',[
+			'as' 	=>	'post-ingresar',
+			'uses'	=>	'PersonaController@ingresarPost']
+		);
+
+Route::get('mostrar',[
+			'as' 	=>	'mostrar',
+			'uses'	=>	'PersonaController@mostrar']
+		);
+
+
+Route::get('actualizar/{id}',[
+			'as' 	=>	'actualizar',
+			'uses'	=>	'PersonaController@actualizar']
+		);
+
+Route::post('actualizar',[
+			'as' 	=>	'post-actualizar',
+			'uses'	=>	'PersonaController@actualizarPost']
+		);
+
+Route::get('borrar/{id}',[
+			'as' 	=>	'borrar',
+			'uses'	=>	'PersonaController@borrar']
+		);
